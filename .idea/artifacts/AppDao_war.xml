@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="AppDao:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="springmvc1_51-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="AppDao:war exploded" />
+    </root>
+  </artifact>
+</component>
