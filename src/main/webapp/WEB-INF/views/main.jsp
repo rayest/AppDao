@@ -10,7 +10,7 @@
 </head>
 
 <body>
-用户名:${user.name }<br>
+用户名:${user.name}<br>
 密码：${user.password}
 </body>
 </html>

@@ -1,7 +1,7 @@
-package com.tgb.web.controller2;
+package cn.rayest.web.controller2;
 
-import com.tgb.web.DaoModel.User;
-import com.tgb.web.DaoModel.UserDao;
+import cn.rayest.web.DaoModel.JdbcUserDao;
+import cn.rayest.web.DaoModel.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,15 +16,14 @@ import java.util.Map;
  */
 @Controller
 public class LoginController{
-    private UserDao userDao;
+    private JdbcUserDao jdbcUserDao;
+
     @RequestMapping(value = "/login.do")
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         String userName = request.getParameter("userName");
-        String userPassword = request.getParameter("userPassword");
-
         Map model = new HashMap();
-        User user = userDao.selectByName(userName, userPassword);
+        User user = jdbcUserDao.selectByName(userName);
 
         if(user != null){
             model.put("user", user);
@@ -35,11 +34,12 @@ public class LoginController{
             return new ModelAndView("Login",model);
         }
     }
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
-    }
-    public UserDao getUserDao() {
-        return userDao;
+
+    public void setJdbcUserDao(JdbcUserDao jdbcUserDao) {
+        this.jdbcUserDao = jdbcUserDao;
     }
 
+    public JdbcUserDao getJdbcUserDao() {
+        return jdbcUserDao;
+    }
 }
