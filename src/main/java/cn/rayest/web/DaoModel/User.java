@@ -1,8 +1,10 @@
-package com.tgb.web.DaoModel;
+package cn.rayest.web.DaoModel;
 
 /**
- * Created by Administrator on 2016/5/25 0025.
+ * Created by Rayest on 2016/5/25 0025.
  */
+
+//1.创建用户类：用户属性、用户行为、构造方法、访问器方法和修改器方法
 public class User {
     private int id;
     private String name;

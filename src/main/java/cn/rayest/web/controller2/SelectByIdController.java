@@ -12,31 +12,31 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Rayest on 2016/5/25 0025.
+ * Created by Rayest on 2016/5/30 0030.
  */
 @Controller
-public class LoginController{
+public class SelectByIdController {
     private JdbcUserDao jdbcUserDao;
 
-    @RequestMapping(value = "/login.do")
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
-        String userName = request.getParameter("userName");
-        Map model = new HashMap();
-        User user = jdbcUserDao.selectByName(userName);
-
-        if(user != null){
-            model.put("user", user);
-            return new ModelAndView("main",model);
-        }
-        else{
-            model.put("error", "用户名或密码不匹配");
-            return new ModelAndView("Login",model);
-        }
+    @RequestMapping(value = "indexselectbyid")
+    public String selectById(HttpServletRequest request, HttpServletResponse response){
+        return "indexSelectById";
     }
 
-    public void setJdbcUserDao(JdbcUserDao jdbcUserDao) {
-        this.jdbcUserDao = jdbcUserDao;
+
+    @RequestMapping(value = "selectbyid")
+    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        Map model = new HashMap();
+        User user = jdbcUserDao.select(id);
+        model.put("user", user);
+        return new ModelAndView("selectById",model);
+        }
+
+
+    public void setJdbcUserDao(JdbcUserDao JdbcUserDao) {
+        jdbcUserDao = JdbcUserDao;
     }
 
     public JdbcUserDao getJdbcUserDao() {

@@ -72,6 +72,44 @@
         </property>
     </bean>
 
+    <bean id="InsertController" class="cn.rayest.web.controller2.InsertController">
+        <property name="JdbcUserDao" ref="JdbcUserDao"></property>
+    </bean>
+    <bean id="mapping4" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <!-- 这里的key就是你的action请求，后面是要分派的控制器-->
+                <prop key="insert">InsertController</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="EditController" class="cn.rayest.web.controller2.EditController">
+        <property name="JdbcUserDao" ref="JdbcUserDao"></property>
+    </bean>
+    <bean id="mapping5" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <!-- 这里的key就是你的action请求，后面是要分派的控制器-->
+                <prop key="edit">EditController</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="SelectByIdController" class="cn.rayest.web.controller2.SelectByIdController">
+        <property name="JdbcUserDao" ref="JdbcUserDao"></property>
+    </bean>
+    <bean id="mapping6" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <!-- 这里的key就是你的action请求，后面是要分派的控制器-->
+                <prop key="edit">EditController</prop>
+            </props>
+        </property>
+    </bean>
+
+
+
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
