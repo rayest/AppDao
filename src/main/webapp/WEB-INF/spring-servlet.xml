@@ -17,8 +17,8 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
         <property name="url" value = "jdbc:mysql://localhost/db?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=true"></property>
-        <property name="username" value="root"></property>
-        <property name="password" value="199011081108"></property>
+        <property name="username" value=""></property>
+        <property name="password" value=""></property>
     </bean>
 
     <!--2.给jdbc模板注入数据源，配置dataSource，使SimpleJdbcTemplate正常工作-->
