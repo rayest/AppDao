@@ -4,8 +4,14 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/find" method="post">
-     <input type="submit" value="find"/>
-</form>
+<fieldset>
+    <legend>查看用户</legend>
+    <form action="/find" method="post">
+        <p>
+            <input type="submit" value="查看"/>
+        </p>
+    </form>
+</fieldset>
+
 </body>
 </html>

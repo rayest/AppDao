@@ -11,8 +11,29 @@
     <title>SelectById</title>
 </head>
 <body>
-用户id:${user.id}<br/>
-用户名:${user.name}<br>
-密码：${user.password}
+
+<fieldset>
+    <legend>查找用户</legend>
+    <table>
+        <thead>
+        <tr>
+            <td>用户标识</td>
+            <td>用户姓名</td>
+            <td>用户密码</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>${user.id}</td>
+            <td>${user.name}</td>
+            <td>${user.password}</td>
+        </tr>
+        </tbody>
+        <tr>
+
+        </tr>
+    </table>
+</fieldset>
 </body>
 </html>

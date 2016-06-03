@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="ISO-8859-1"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
 
@@ -13,9 +13,17 @@
 
 <body>
 <form action="login.do" method="post">
-    userName:<input type="text" name="userName"/><br/>
-    <!--password:<input type="password" name="userPassword"/><br/>-->
-    <input type="submit" value="Login"/><input type="reset" value="reset"/>
+    <fieldset>
+        <legend>查找用户</legend>
+        <p>
+            <label for="userName">
+                用户姓名:<input placeholder="name" type="text" id="userName" name="userName"/>
+            </label>
+        </p>
+        <input type="submit" value="查询"/>
+        <input type="reset" value="重置"/>
+    </fieldset>
+
 </form>
 </body>
 </html>

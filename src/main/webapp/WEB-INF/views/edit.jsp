@@ -13,7 +13,7 @@
 <body>
 <h4>编辑成功！</h4>
 <form action="/find" method="post">
-    <input type="submit" value="find"/>
+    <input type="submit" value="查看"/>
 </form>
 </body>
 </html>

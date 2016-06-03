@@ -11,12 +11,17 @@
     <title>IndexEdit</title>
 </head>
 <body>
+
 <form action="/edit" method="post">
-    userId:<input type="text" name="id"/><br/>
-    userName:<input type="text" name="name"><br/>
-    userPassword:<input type="text" name="password"><br/>
-    <!--password:<input type="password" name="userPassword"/><br/>-->
-    <input type="submit" value="eidt"/><input type="reset" value="reset"/>
+    <fieldset>
+        <legend>编辑用户</legend>
+        <p>用户标识: <input placeholder="id" type="text" name="id" /></p>
+        <p>用户姓名: <input placeholder="name" type="text" name="name" /></p>
+        <p>用户密码: <input placeholder="password" type="password" name="password" /></p>
+        <input type="submit" value="编辑"/>
+        <input type="reset" value="重置"/>
+    </fieldset>
 </form>
+
 </body>
 </html>

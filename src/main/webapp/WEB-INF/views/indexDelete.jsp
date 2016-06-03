@@ -11,10 +11,14 @@
     <title>indexDelete</title>
 </head>
 <body>
+
 <form action="/delete" method="post">
-    userId:<input type="text" name="id"/><br/>
-    <!--password:<input type="password" name="userPassword"/><br/>-->
-    <input type="submit" value="Delete"/><input type="reset" value="reset"/>
+    <fieldset>
+        <legend>删除用户</legend>
+        <p>用户标识: <input placeholder="id" type="text" name="id" /></p>
+        <input type="submit" value="删除"/>
+        <input type="reset" value="重置"/>
+    </fieldset>
 </form>
 </body>
 </html>

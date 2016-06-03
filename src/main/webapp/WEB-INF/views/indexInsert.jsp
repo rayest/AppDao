@@ -5,11 +5,13 @@
 </head>
 <body>
 <form action="/insert" method="post">
-    用户id：<input type="text" name="id">
-    用户姓名:<input type="text" name="name"><br/>
-    用户密码:<input type="text" name="password"><br/>
-    <!--password:<input type="password" name="userPassword"/><br/>-->
-    <input type="submit" value="添加"/><input type="reset" value="reset"/>
+    <fieldset>
+        <legend>添加用户</legend>
+        <p>用户标识: <input placeholder="id" type="text" name="id" /></p>
+        <p>用户姓名: <input placeholder="name" type="text" name="name" /></p>
+        <p>用户密码: <input placeholder="password" type="password" name="password" /></p>
+        <input type="submit" value="添加"/><input type="reset" value="重置"/>
+    </fieldset>
 </form>
 </body>
 </html>

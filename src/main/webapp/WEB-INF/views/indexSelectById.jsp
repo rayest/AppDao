@@ -11,10 +11,18 @@
     <title>SelectById</title>
 </head>
 <body>
+
 <form action="/selectbyid" method="post">
-    userId:<input type="text" name="id"/><br/>
-    <!--password:<input type="password" name="userPassword"/><br/>-->
-    <input type="submit" value="查询"/><input type="reset" value="reset"/>
+    <fieldset>
+        <legend>查找用户</legend>
+        <p>
+            <label for="id">
+                用户标识: <input placeholder="id" type="text" id="id" name="id" />
+            </label>
+        </p>
+        <input type="submit" value="查找"/>
+        <input type="reset" value="重置"/>
+    </fieldset>
 </form>
 </body>
 </html>
